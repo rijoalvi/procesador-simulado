@@ -6,5 +6,22 @@ namespace Procesador
 {
     class memoriaPrincipal
     {
+        private int[,] memoria;
+
+        public memoriaPrincipal()
+        {
+            memoria = new int[32, 16];
+        }
+
+        public void write(/*Variables de que se va a escribir y en donde*/)
+        {
+            
+        }
+
+        public void read(/*Variables de que se va a escribir y en donde*/)
+        {
+            
+        }
+
     }
 }

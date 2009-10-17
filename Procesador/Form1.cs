@@ -13,7 +13,9 @@ namespace Procesador
     {
         public Form1()
         {
-            Procesador p = new Procesador();
+            memoriaPrincipal memoria = new memoriaPrincipal();
+            busDatos bus = new busDatos(memoria);
+            Procesador p = new Procesador(bus, memoria);
 
             //Creación de los hilos (Núcleos)
             Thread th1 = new Thread(new ThreadStart(p.procesar));
@@ -21,7 +23,7 @@ namespace Procesador
             Thread th3 = new Thread(new ThreadStart(p.procesar));
             Thread th4 = new Thread(new ThreadStart(p.procesar));
 
-            //Colocación de un ID a cada núcleo
+            //Colocación de un ID a cada Núcleo (hilo)
             th1.Name = "1";
             th2.Name = "2";
             th3.Name = "3";
