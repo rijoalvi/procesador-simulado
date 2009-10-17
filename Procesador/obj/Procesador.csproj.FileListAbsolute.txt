@@ -1,0 +1,7 @@
+C:\Users\Ricardo\Documents\Universidad\Arquitectura de Computadoras\Proyecto\Procesador\Procesador\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ricardo\Documents\Universidad\Arquitectura de Computadoras\Proyecto\Procesador\Procesador\obj\Debug\Procesador.Properties.Resources.resources
+C:\Users\Ricardo\Documents\Universidad\Arquitectura de Computadoras\Proyecto\Procesador\Procesador\obj\Debug\Procesador.csproj.GenerateResource.Cache
+C:\Users\Ricardo\Documents\Universidad\Arquitectura de Computadoras\Proyecto\Procesador\Procesador\bin\Debug\Procesador.exe
+C:\Users\Ricardo\Documents\Universidad\Arquitectura de Computadoras\Proyecto\Procesador\Procesador\bin\Debug\Procesador.pdb
+C:\Users\Ricardo\Documents\Universidad\Arquitectura de Computadoras\Proyecto\Procesador\Procesador\obj\Debug\Procesador.exe
+C:\Users\Ricardo\Documents\Universidad\Arquitectura de Computadoras\Proyecto\Procesador\Procesador\obj\Debug\Procesador.pdb
