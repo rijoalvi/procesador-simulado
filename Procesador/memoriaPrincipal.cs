@@ -13,9 +13,9 @@ namespace Procesador
             memoria = new int[32, 16];
         }
 
-        public void write(/*Variables de que se va a escribir y en donde*/)
+        public void write(int[] datos)
         {
-            
+            //memoria[,]=datos[]
         }
 
         public void read(/*Variables de que se va a escribir y en donde*/)

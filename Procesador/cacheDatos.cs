@@ -37,11 +37,8 @@ namespace Procesador
             //Si es un miss entonces se hace write allocate que no me acuerdo que es (PREGUNTAR A PROFE)
         }
 
-        public int[] read(/*Variables de que se va a escribir y en donde*/)
+        public void read(/*Variables de que se va a escribir y en donde*/)
         {
-            int[] respuesta;
-            respuesta = null;
-            return respuesta;
             //Si el bloque al que se le va a caer encima tiene el dirty bit en 0 entonces SI hay que escribir 
             //el bloque al que le voy a caer encima en memoria y luego caerle encima
         }
