@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Procesador
 {
-    class busDatos
+    public class busDatos
     {
         memoriaPrincipal mem;
         public busDatos(memoriaPrincipal m) 

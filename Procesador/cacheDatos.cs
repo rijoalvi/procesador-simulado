@@ -6,27 +6,14 @@ namespace Procesador
 {
     class cacheDatos
     {
-        private int[,] bloques;
+        private Bloque_de_Cache[] _bloques;
         busDatos bus;
 
         public cacheDatos(busDatos b)
         {
             bus = b;
 
-            bloques = new int[4, 19];
-            //Inicializamos los bloques la caché. Tienen 20 bits y no 16 porque el bit 17 es el de la etiqueta, el 18 
-            //es el que indica si el bloque es compartido o no, el bit 19 es el bit de validez y el 20 es el bit de suciedad.
-
-            //bit compartido:
-            //Está en 1 si el bloque esta compartido (está en más de una caché a la vez)
-            //Está en 0 sino
-
-            //bit de validez: 
-            //Está en 1 si el bloque contiene la misma informacion que está en memoria (si otro bloque no 
-            //tiene los mismos datos y ha escrito en ellos)
-
-            //Está en 0 si no es válido (si los datos están modificados en otro bloque = si el otro bloque 
-            //tiene el bit de suciedad en 1)
+            
 
         }
 
