@@ -13,8 +13,8 @@ namespace Procesador
     {
         public Form1()
         {
-            memoriaPrincipal memoria = new memoriaPrincipal();
-            busDatos bus = new busDatos(memoria);
+            Memoria_Principal memoria = new Memoria_Principal();
+            Bus bus = new Bus(ref memoria);
             Procesador p = new Procesador(bus, memoria);
 
             //Creación de los hilos (Núcleos)
