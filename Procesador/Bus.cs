@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Procesador
 {
@@ -20,19 +21,20 @@ namespace Procesador
             get { return this._ocupado; }
             
         }
-        public void escribir_a_memoria_principal()
+        public void escribir_a_memoria_principal(Bloque datos, int numero_de_bloque_a_escribir)
         {
-            //Ojo que se dura 12 ciclos bajando y subiendo varas de memoria a cache
+            this._memoria.write(datos, numero_de_bloque_a_escribir);
         }
 
-        public int[] traer_de_memoria_principal(ref Cache cache, int numero_de_bloque_a_leer, int numero_de_bloque_de_escritura)
+        public void traer_de_memoria_principal(ref Cache cache, int numero_de_bloque_a_leer, int numero_de_bloque_de_escritura)
+        {
+            Bloque temporal = new Bloque();
+            this._memoria.read(ref temporal, numero_de_bloque_a_leer);
+            
+        }
+        private void escritura_con_bloqueo_a_cache(ref Cache cache, Bloque datos ,int numero_de_bloque_de_escritura)
         {
 
-            //Ojo que se dura 12 ciclos bajando y subiendo varas de memoria a cache
-            //llama a otro metodo para relizar la escitura en cache en donde se bloquea con un mutex la cache temporalmente
-            int[] respuesta;
-            respuesta = null;
-            return respuesta;
         }
     }
 }

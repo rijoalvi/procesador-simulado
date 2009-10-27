@@ -1,6 +1,6 @@
 namespace Procesador
 {
-    partial class Form1
+    partial class Procesador
     {
         /// <summary>
         /// Required designer variable.
