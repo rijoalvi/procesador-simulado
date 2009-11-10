@@ -56,10 +56,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barrera.cs" />
     <Compile Include="Bloque.cs" />
     <Compile Include="Bloque_de_Cache.cs" />
     <Compile Include="Bus.cs" />
-    <Compile Include="Cache.cs" />
+    <Compile Include="Cache_de_Datos.cs" />
+    <Compile Include="Cache_de_Instrucciones.cs" />
+    <Compile Include="Cargador_de_Listas_de_Ejecucion.cs" />
+    <Compile Include="Controlador_de_Caches.cs" />
+    <Compile Include="Lista_de_Instrucciones.cs" />
     <Compile Include="Procesador.cs">
       <SubType>Form</SubType>
     </Compile>

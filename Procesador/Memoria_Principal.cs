@@ -10,17 +10,25 @@ namespace Procesador
 
         public Memoria_Principal()
         {
-            _memoria = new Bloque[32];
+            this._memoria = new Bloque[128];
+            this.inicializar_memoria();
         }
-
+        private void inicializar_memoria() 
+        {
+            for (int x = 0; x < 128; ++x ) 
+            {
+                Bloque vacio = new Bloque();
+                this._memoria[x] = vacio;
+            }
+        }
         public void write(Bloque datos, int numero_de_bloque)
         {
             this._memoria[numero_de_bloque] = datos;
         }
 
-        public void read(ref Bloque datos, int numero_de_bloque)
+        public Bloque read(int numero_de_bloque)
         {
-            datos = this._memoria[numero_de_bloque];
+            return this._memoria[numero_de_bloque];
         }
 
     }
