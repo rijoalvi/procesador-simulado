@@ -58,13 +58,12 @@ namespace Procesador
             this._nucleo_2.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[1]));
             this._nucleo_3.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[2]));
             this._nucleo_4.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[3]));
-            //this._nucleo_1.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[4]));
-            //this._nucleo_2.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[5]));
-            //this._nucleo_3.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[6]));
-            //this._nucleo_4.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[7]));
-            //this._nucleo_1.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[8]));
-            //this._nucleo_2.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[9]));
-            //this._nucleo_1.procesar();
+            this._nucleo_1.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[4]));
+            this._nucleo_2.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[5]));
+            this._nucleo_3.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[6]));
+            this._nucleo_4.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[7]));
+            this._nucleo_1.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[8]));
+            this._nucleo_2.cargar_cache_de_instrucciones(((Lista_de_Instrucciones)listas[9]));            
 
 
             //Start y join de los hilos
@@ -77,8 +76,100 @@ namespace Procesador
             nucleo_2.Join();
             nucleo_3.Join();
             nucleo_4.Join();
-            
             InitializeComponent();
+            cargar_cache_1();
+            cargar_cache_2();
+            cargar_cache_3();
+            cargar_cache_4();
+            
+        }
+        private void cargar_cache_1()
+        {
+            for(int x = 0; x<4; ++x)
+            {
+                cache_1.Rows.Add();
+                for (int y = 0; y < 4; ++y)
+                {                    
+                    cache_1.Rows[x].Cells[y].Value = this._nucleo_1.cache_de_datos.bloques[y].get_datos(x).ToString();                    
+                }
+            }
+            cache_1.Rows.Add();
+            cache_1.Rows.Add();
+            cache_1.Rows.Add();
+            cache_1.Rows.Add();
+            for (int y = 0; y < 4; ++y)
+            {                
+                cache_1.Rows[4].Cells[y].Value = this._nucleo_1.cache_de_datos.bloques[y].valido.ToString();
+                cache_1.Rows[5].Cells[y].Value = this._nucleo_1.cache_de_datos.bloques[y].sucio .ToString();
+                cache_1.Rows[6].Cells[y].Value = this._nucleo_1.cache_de_datos.bloques[y].compartido.ToString();
+                cache_1.Rows[7].Cells[y].Value = this._nucleo_1.cache_de_datos.bloques[y].etiqueta.ToString();
+            }
+        }
+        private void cargar_cache_2()
+        {
+            for (int x = 0; x < 4; ++x)
+            {
+                cache_2.Rows.Add();
+                for (int y = 0; y < 4; ++y)
+                {
+                    cache_2.Rows[x].Cells[y].Value = this._nucleo_2.cache_de_datos.bloques[y].get_datos(x).ToString();
+                }
+            }
+            cache_2.Rows.Add();
+            cache_2.Rows.Add();
+            cache_2.Rows.Add();
+            cache_2.Rows.Add();
+            for (int y = 0; y < 4; ++y)
+            {
+                cache_2.Rows[4].Cells[y].Value = this._nucleo_2.cache_de_datos.bloques[y].valido.ToString();
+                cache_2.Rows[5].Cells[y].Value = this._nucleo_2.cache_de_datos.bloques[y].sucio.ToString();
+                cache_2.Rows[6].Cells[y].Value = this._nucleo_2.cache_de_datos.bloques[y].compartido.ToString();
+                cache_2.Rows[7].Cells[y].Value = this._nucleo_2.cache_de_datos.bloques[y].etiqueta.ToString();
+            }
+        }
+        private void cargar_cache_3()
+        {
+            for (int x = 0; x < 4; ++x)
+            {
+                cache_3.Rows.Add();
+                for (int y = 0; y < 4; ++y)
+                {
+                    cache_3.Rows[x].Cells[y].Value = this._nucleo_3.cache_de_datos.bloques[y].get_datos(x).ToString();
+                }
+            }
+            cache_3.Rows.Add();
+            cache_3.Rows.Add();
+            cache_3.Rows.Add();
+            cache_3.Rows.Add();
+            for (int y = 0; y < 4; ++y)
+            {
+                cache_3.Rows[4].Cells[y].Value = this._nucleo_3.cache_de_datos.bloques[y].valido.ToString();
+                cache_3.Rows[5].Cells[y].Value = this._nucleo_3.cache_de_datos.bloques[y].sucio.ToString();
+                cache_3.Rows[6].Cells[y].Value = this._nucleo_3.cache_de_datos.bloques[y].compartido.ToString();
+                cache_3.Rows[7].Cells[y].Value = this._nucleo_3.cache_de_datos.bloques[y].etiqueta.ToString();
+            }
+        }
+        private void cargar_cache_4()
+        {
+            for (int x = 0; x < 4; ++x)
+            {
+                cache_4.Rows.Add();
+                for (int y = 0; y < 4; ++y)
+                {
+                    cache_4.Rows[x].Cells[y].Value = this._nucleo_4.cache_de_datos.bloques[y].get_datos(x).ToString();
+                }
+            }
+            cache_4.Rows.Add();
+            cache_4.Rows.Add();
+            cache_4.Rows.Add();
+            cache_4.Rows.Add();
+            for (int y = 0; y < 4; ++y)
+            {
+                cache_4.Rows[4].Cells[y].Value = this._nucleo_4.cache_de_datos.bloques[y].valido.ToString();
+                cache_4.Rows[5].Cells[y].Value = this._nucleo_4.cache_de_datos.bloques[y].sucio.ToString();
+                cache_4.Rows[6].Cells[y].Value = this._nucleo_4.cache_de_datos.bloques[y].compartido.ToString();
+                cache_4.Rows[7].Cells[y].Value = this._nucleo_4.cache_de_datos.bloques[y].etiqueta.ToString();
+            }
         }
     }
 }
