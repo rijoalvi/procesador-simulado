@@ -81,7 +81,27 @@ namespace Procesador
             cargar_cache_2();
             cargar_cache_3();
             cargar_cache_4();
+            crear_bitacoras();
             
+        }
+        public void crear_bitacoras() 
+        {
+            for (int x = 0; x < this._nucleo_1.cache_de_instrucciones.listas_de_ejecucion.Count; ++x ) 
+            {
+                ((Lista_de_Instrucciones)this._nucleo_1.cache_de_instrucciones.listas_de_ejecucion[x]).crear_archivo_bitacora();
+            }
+            for (int x = 0; x < this._nucleo_2.cache_de_instrucciones.listas_de_ejecucion.Count; ++x)
+            {
+                ((Lista_de_Instrucciones)this._nucleo_2.cache_de_instrucciones.listas_de_ejecucion[x]).crear_archivo_bitacora();
+            }
+            for (int x = 0; x < this._nucleo_3.cache_de_instrucciones.listas_de_ejecucion.Count; ++x)
+            {
+                ((Lista_de_Instrucciones)this._nucleo_3.cache_de_instrucciones.listas_de_ejecucion[x]).crear_archivo_bitacora();
+            }
+            for (int x = 0; x < this._nucleo_4.cache_de_instrucciones.listas_de_ejecucion.Count; ++x)
+            {
+                ((Lista_de_Instrucciones)this._nucleo_4.cache_de_instrucciones.listas_de_ejecucion[x]).crear_archivo_bitacora();
+            }
         }
         private void cargar_cache_1()
         {
