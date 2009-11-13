@@ -15,12 +15,12 @@ namespace Procesador
         }
         public void escribir_a_memoria_principal(Bloque datos, int numero_de_bloque_a_escribir)
         {
-            this._memoria.write(datos, numero_de_bloque_a_escribir/4);            
+            this._memoria.write(datos, numero_de_bloque_a_escribir/16);            
         }
 
         public Bloque traer_de_memoria_principal(int numero_de_bloque_a_leer)
         {                                    
-            return this._memoria.read(numero_de_bloque_a_leer/4);            
+            return this._memoria.read(numero_de_bloque_a_leer/16);            
         }
     }
 }

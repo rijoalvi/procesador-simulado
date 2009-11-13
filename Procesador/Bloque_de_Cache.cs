@@ -18,8 +18,7 @@ namespace Procesador
             this._sucio = false;
             this._valido = false;
             this._etiqueta =-1;
-        }
-
+        }        
         public bool compartido
         {
             get { return this._compartido; }
